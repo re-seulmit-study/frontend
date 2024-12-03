@@ -1,0 +1,48 @@
+
+스토어 정의:
+
+create 함수로 상태와 상태 변경 로직(setUserId)을 정의합니다.
+상태 읽기:
+
+React 컴포넌트에서 useAuthStore를 호출하여 상태(userId)를 읽습니다.
+상태 업데이트:
+
+setUserId 함수가 호출되면, set({ userId })를 통해 상태를 변경합니다.
+
+______________________________________________________________
+
+해싱은 복호화가 필요 없는 값을 처리할 때 유용
+bcrypt은 추가적으로 **솔트(Salt)**를 포함하여 보안을 강화합니다.
+※ 복호화: 암호화된 데이터를 정상적인 데이터로 바꾸는 과정
+복화화가 필요한 데이터인 경우 : crypto-js 사용
+
+1. bcrypt의 솔트 생성
+- 랜덤한 데이터를 생성하여 비밀번호에 추가
+- 동일한 비밀번호라도 해싱 결과를 다르게 만들어 무차별 대입 공격을 어렵게함
+- 출력값 예시: $2a$10$EixZaYVkRo1B4tjt/JGuOeOU6xHJbA3DPvTC9T1g9V92mW1yjf2MS
+
+2. 비밀번호 + 솔트 해싱
+- 비밀번호와 솔트를 조합하여 해싱 알고리즘 적용
+- bycrpr는 비밀번호를 여러번 해싱하는 구조(반복 작업)을 포함하여 추가적인 보안 제공
+
+
+// zustand의 메서드
+//  create() : 상태와 상태 변경 로직을 정의하는 객체를 반환
+// set(): zustand 스토어 상태를 변경
+
+// 1. useAuthStore함수에 create()매서드로 상태변환 로직 정의
+const useAuthStore = create((set) => ({
+  //userId: '' <= Zustand의 스토어 상태값, 객체X
+  userId: '',
+  // setUserId: userId를 업데이트 하는 함수, 호출될 때 set사용하여 Zustand 상태 변경
+  // 1) 상태관리 변수에서 전달받은 값을 병합
+  setUserId: (userId) => set({ userId }),
+
+  pwd: '',
+  setPwd: (pwd) => {
+    // 비밀번호 해싱:
+    // bcrypt.hashSync(원본 데이터, 해싱 강도);
+    // 해싱의 강도: 최소 4 ~ 최대31, 높을 수록 작업의 반복 횟수가 높아져 속도가 느려짐, 일반적으로 10~12 사이의 값을 사용
+    const hashedPwd = bcrypt.hashSync(pwd, 10);
+    set({pwd: hashedPwd});
+  },
