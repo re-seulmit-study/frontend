@@ -6,9 +6,6 @@
 export default function Login() {
 // zustand useAuthStore 상태관리자 import
 const { userId, setUserId, pwd, setPwd } = useAuthStore();
-
-
-const Login = () => {
 const { errorMessage, setErrorMessage, resetErrorMessage } = useGetErrorMsg();
 
 const handleLogin = async () => {
@@ -23,16 +20,10 @@ setErrorMessage("loginFailed"); // 에러 메시지 설정
   //// 코드 리턴구역 //////////////
   return (
     <>
-
-  return (
     <div>
       <button onClick={handleLogin}>로그인</button>
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
     </div>
-  );
-};
-
-
     </>
   );
-} /////////// Login /////////////////////
+} 
