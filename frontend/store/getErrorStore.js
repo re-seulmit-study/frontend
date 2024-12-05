@@ -7,12 +7,10 @@ const useGetErrorMsg = create((set) => ({
     // 에러메세지
     errorMsg: "",
     setErrorMsg: (msgKey) => {
-
       // 전달받은 props로 메세지 저장소에서 조회 or 예외에러메세지
       const resloveMsg = errorMessages[msgKey] || exceptionMsg;
       set({errorMessages: resloveMsg}); //상태 업데이트
     },
-
 
     //에러 메세지 초기화
     resetErrorMsg: () => set({errorMsg: ""}),
