@@ -63,17 +63,6 @@ export default function Layout() {
 
   //화면 랜더링 구역/////////////////////////////////////////////////////
 
-  useEffect(() => {
-    try {
-      const minfo = JSON.parse(sessionStorage.getItem("minfo")) || {};
-      setLoginSts(minfo);
-      makeMsg(minfo.unm);
-    } catch (error) {
-      console.error("sessionStorage 데이터 파싱 에러:", error);
-      setLoginSts(null); // 또는 다른 기본값 설정
-    }
-  }, []);
-
 
 
   // 코드리턴구역 ///////////////
@@ -84,7 +73,6 @@ export default function Layout() {
         selCat,
         setSelCat,
         goPage,
-        makeMsg,
         recentSearches,
         setRecentSearches,
         searchLog,
@@ -96,9 +84,6 @@ export default function Layout() {
       }}
     >
       <TopArea
-        loginMsg={loginMsg}
-        loginSts={loginSts}
-        logoutFn={logoutFn}
         goPage={goPage}
         setRecentSearches={setRecentSearches}
         recentSearches={recentSearches}
