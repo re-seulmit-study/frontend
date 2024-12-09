@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
 
 //module
-import Logo from "./Logo";
 
 //css
 import "../../css/search.scss";
