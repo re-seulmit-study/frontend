@@ -2,7 +2,7 @@ import { TopArea } from "./TopArea";
 import MainArea from "./MainArea";
 import FooterArea from "./FooterArea";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { sCon } from "../modules/sCon.jsx";
+import sCon from '../modules/sCon';
 import { useNavigate } from "react-router-dom";
 import CartList from "../modules/CartList";
 ///////import area///////////////////////////////////
