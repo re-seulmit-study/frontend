@@ -6,7 +6,7 @@ import $ from "jquery";
 ////module
 import { sCon } from "./sCon";
 
-import "../../css/intro.scss";
+import "../css/intro.scss";
 //////////////////import area///////////////////////
 
 export default function Intro() {

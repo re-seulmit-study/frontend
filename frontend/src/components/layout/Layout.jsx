@@ -78,7 +78,7 @@ export default function Layout() {
     //2. 세션스 지우기 : minfo
     sessionStorage.removeItem("login-sts");
     //3. 로그인 메세지 초기화
-    // setLoginMsg(null);
+    setLoginMsg(null);
     //4. 메인페이지로 이동
     goPage("/");
   }, []);
@@ -100,20 +100,20 @@ export default function Layout() {
   }, []);
 
 
-  // useEffect(() => {
-  //   //로그인 상태 체크//////////////
-  //   //만약 세션스의 minfo 값이 null이 아니라면 로그인 상태변수 업데이트
-  //   //ㄴ> null이 아니면 조건문 true 처리
-  //   if (sessionStorage.getItem("minfo")) {
-  //     //세션스 변수할당
-  //     let sessionSts = sessionStorage.getItem("minfo");
-  //     //로그인 상태값
-  //     setLoginSts(sessionSts);
-  //     //로그인 메시지 업데이트
-  //     //ㄴ> 세션스의 unm(이름값)을 보내준다
-  //     makeMsg(JSON.parse(sessionSts).unm);
-  //   } ////if/////////////
-  // }, []);
+  useEffect(() => {
+    //로그인 상태 체크//////////////
+    //만약 세션스의 minfo 값이 null이 아니라면 로그인 상태변수 업데이트
+    //ㄴ> null이 아니면 조건문 true 처리
+    if (sessionStorage.getItem("minfo")) {
+      //세션스 변수할당
+      let sessionSts = sessionStorage.getItem("minfo");
+      //로그인 상태값
+      setLoginSts(sessionSts);
+      //로그인 메시지 업데이트
+      //ㄴ> 세션스의 unm(이름값)을 보내준다
+      makeMsg(JSON.parse(sessionSts).unm);
+    } ////if/////////////
+  }, []);
 
   // 코드리턴구역 ///////////////
   return (

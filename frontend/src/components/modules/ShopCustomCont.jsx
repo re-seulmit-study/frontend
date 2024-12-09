@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import $ from "jquery";
-import { sCon } from "../pages/sCon";
+import { sCon } from "../modules/sCon";
 
 //data
 import { product, options, notiImg } from "../data/product";

@@ -1,6 +1,6 @@
 // 코믹스 페이지 컴포넌트 ///
 
-import SubTitle from "../modules/SubTitle";
+import SubTitle from "../components/modules/SubTitle";
 
 export default function Benefit(){
 

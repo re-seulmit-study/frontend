@@ -3,18 +3,17 @@
 import React, { useContext, useEffect } from "react";
 
 //css
-import "../../css/shop.scss";
+import "../css/shop.scss";
 ///module
-import Category from "../modules/Category";
-import SwiperPrdList from "../plugin/Swiper_prdList";
-import ShopCustomCont from "../modules/ShopCustomCont";
-import SwiperThumbsList from "../plugin/Swiper_ThumbsList";
+import SwiperPrdList from "../components/plugin/Swiper_prdList";
+import ShopCustomCont from "../components/modules/ShopCustomCont";
+import SwiperThumbsList from "../components/plugin/Swiper_ThumbsList";
 // import TabBox from "../modules/Tabbox";
 
 import { sCon } from "./sCon";
 
 //data
-import { product, notiImg } from "../data/product";
+import { product, notiImg } from "../components/data/product";
 import { useParams, useLocation } from "react-router-dom";
 
 ////////import area//////////////////////////////////

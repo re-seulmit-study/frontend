@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 //css
-import "../../css/member.scss";
+import "../css/member.scss";
 
 //data
-import { terms } from "../data/terms_text";
+import { terms } from "../components/data/terms_text";
 import { Link, useNavigate } from "react-router-dom";
-import { initData } from "../func/memFn";
+import { initData } from "../components/func/memFn";
 
 ////import area//////////////////////////////////
 

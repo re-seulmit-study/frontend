@@ -7,7 +7,7 @@ import $ from "jquery";
 
 //css
 import "../../css/search.scss";
-import { sCon } from "../pages/sCon";
+import { sCon } from "../modules/sCon";
 //////import area/////////////////////////////////////////
 
 function SearchInner() {

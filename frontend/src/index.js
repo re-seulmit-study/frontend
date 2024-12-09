@@ -6,19 +6,20 @@ import Layout from "./components/layout/Layout";
 
 //page 호출
 // import Intro from "./components/pages/Intro";
-import Main from "./components/pages/Main";
-import Shop from "./components/pages/Shop";
-import Inside from "./components/pages/Inside";
-import Taste from "./components/pages/Taste";
-import Benefit from "./components/pages/Benefit";
-import Login from "./components/pages/Login";
-import Notice from "./components/pages/Notice";
-import Detail from "./components/pages/Detail";
+// import Main from "./components/pages/Main";
+import Shop from "./pages/Main";
+import Inside from "./pages/Inside";
+import Taste from "./pages/Taste";
+import Benefit from "./pages/Benefit";
+import Login from "./pages/Login";
+import Notice from "./pages/Notice";
+import Detail from "./pages/Detail";
+import Main from "./pages/Main";
 
 //sass 패키지 호출
 import "./css/index.scss";
-import SearchPage from "./components/pages/SearchPage";
-import Member from "./components/pages/Member";
+import SearchPage from "./pages/SearchPage";
+import Member from "./pages/Member";
 import MainArea from "./components/layout/MainArea";
 
 //컴포넌트 호출

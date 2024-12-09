@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { sCon } from "../pages/sCon";
 import $ from "jquery";
 
 //data

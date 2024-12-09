@@ -2,10 +2,10 @@
 import React from "react";
 //변수값 받기위해 useLocation import
 import { useLocation } from "react-router-dom";
-import Searching from "../modules/Searching";
+import Searching from "../components/modules/Searching";
 
 //css
-import "../../css/search.scss";
+import "../css/search.scss";
 
 //////import area /////////////////////////////////
 

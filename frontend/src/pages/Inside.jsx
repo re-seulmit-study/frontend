@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Act_text from "../func/Act_text";
+import Act_text from "../components/func/Act_text";
 import $ from "jquery";
 //css
-import "../../css/inside.scss";
+import "../css/inside.scss";
 ////////import area//////////////////////////////////////////////
 
 function Inside() {

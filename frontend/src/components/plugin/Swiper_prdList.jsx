@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import $ from "jquery";
 
 //data
 import { product } from "../data/product";

@@ -2,9 +2,9 @@
 
 //data
 import { Link } from "react-router-dom";
-import SwiperPrdList from "../plugin/Swiper_prdList";
-import SwipverMainVisual from "../plugin/Swipver_MainVisual";
-import SwiperBestItem from "../plugin/Swiper_bestItem";
+import SwiperPrdList from "../components/plugin/Swiper_prdList";
+import SwipverMainVisual from "../components/plugin/Swipver_MainVisual";
+import SwiperBestItem from "../components/plugin/Swiper_bestItem";
 //////import area /////////////////////////////////
 
 export default function Main() {

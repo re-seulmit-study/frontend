@@ -3,16 +3,16 @@ import React, { Fragment, useContext, useRef, useState } from "react";
 import $ from "jquery";
 
 //공지사항 css
-import "../../css/notice.scss";
+import "../css/notice.scss";
 
 //타이틀 데이터
-import SubTitle from "../modules/SubTitle";
+import SubTitle from "../components/modules/SubTitle";
 
 //사용자 기본정보 생성함수
-import { initData } from "../func/memFn";
+import { initData } from "../components/func/memFn";
 
 //로컬스토리지 확인 JS
-import { initBoardData } from "../func/board_fn";
+import { initBoardData } from "../components/func/board_fn";
 import { sCon } from "./sCon";
 
 ///////import area////////////////////////////

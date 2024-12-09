@@ -4,9 +4,9 @@ import { useContext, useEffect, useState } from "react";
 import $ from "jquery";
 
 //css
-import "../../css/login.scss";
+import "../css/login.scss";
 //로컬 스토리지 셋팅 함수 호출!
-import { initData } from "../func/memFn";
+import { initData } from "../components/func/memFn";
 import { sCon } from "./sCon";
 
 /////import area///////////////////////////////////////////////

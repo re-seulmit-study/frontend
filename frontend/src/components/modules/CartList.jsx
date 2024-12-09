@@ -1,8 +1,7 @@
 //서치박스 내용물
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
-import { sCon } from "../pages/sCon";
+import { sCon } from "../modules/sCon";
 
 //숫자 콤마 추가
 import { addComma } from "../func/common_fn";

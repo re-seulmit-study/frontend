@@ -1,8 +1,7 @@
 //하단영역 컴포넌트 - FooterArea.jsx
 import { memo } from "react";
 import Logo from "../modules/Logo";
-
-import Intro from "../pages/Intro";
+import Intro from "../../pages/Intro";
 
 
 /////import area///////////////////////////////////////////////////////////
