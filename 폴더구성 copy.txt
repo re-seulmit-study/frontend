@@ -1,0 +1,52 @@
+/src
+  /components
+    /atoms
+      ButtonMain.jsx
+      ButtonSub.jsx
+      ButtonIconMain.jsx
+      ButtonIconSub.jsx
+      ButtonClose.jsx
+      BadgeSale.jsx
+      OptionInput.jsx
+    /molecules
+      SearchBar.jsx
+      ProductCard.jsx
+      CartPopup.jsx
+      TextboxInfo.jsx
+      
+    /organisms
+      Header.jsx
+      Footer.jsx
+      SubHeader.jsx
+      CategorieBox.jsx
+      ProductList.jsx
+      TebBox.jsx
+    /templates
+      PageTemplate.jsx
+      ProductDetail.jsx
+    /pages
+      IntroPage.jsx
+      MainPage.jsx
+      ProductPage.jsx
+    main.jsx //index역할
+
+
+comment________________________________________________________________________________
+
+채택구조: atomic design 구조
+
+고민해본 결과 쇼핑몰의 특성상 정형화된 템플릿의 컴포넌트와 그것을 이루는
+규칙적인 요소들이 있으므로 재사용성과 일관성이 중요함. 따라서 해당 구조를 채택함
+____________________________________________________________________________________________
+
+리엑트 폴더구조가 리엑트에 성능에 끼치는 영향:
+
+1. 리엑트의 구조설계 5단계
+https://aierse.tistory.com/4
+
+2. 리엑트의 디렉토리 구조
+https://laurent.tistory.com/entry/React-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%8F%B4%EB%8D%94%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0
+
+3. 아토믹 구조에 대하여
+https://ramincoding.tistory.com/entry/React-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%97%90%EC%84%9C%EC%9D%98-%EC%95%84%ED%86%A0%EB%AF%B9-%EB%94%94%EC%9E%90%EC%9D%B8Atomic-Design%EC%9D%B4%EB%9E%80
+

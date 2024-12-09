@@ -20,46 +20,61 @@ import "./css/index.scss";
 import SearchPage from "./components/pages/SearchPage";
 import Member from "./components/pages/Member";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 //컴포넌트 호출
 /////////////////////import area/////////////////////////////
 
 /// 컴포넌트 출력 ///
 export default function MainComponent() {
-  const queryClient = new ReactQueryDevtools();
+  const queryClient = new QueryClient();
+  // const queryClient = new ReactQueryDevtools();
+
+  useEffect(() => {
+    // 카카오 SDK 초기화
+    if (!window.Kakao.isInitialized()) {
+      window.Kakao.init("YOUR_JAVASCRIPT_KEY");
+      console.log("Kakao SDK initialized", window.Kakao.isInitialized());
+    }
+  }, []);
+
   //////////화면랜더링 구역///////////////////////////////////////////////////////////
   return (
     // 라우터 루트로 라우터 구성시작
     // basename 속성은 package.json의 "homepage"속성값을
     // 읽어옴 (읽는 방법은 process.env.PUBLIC_URL)
     <>
-      <QueryClientProvider client={queryClient}>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-          {/* 라우터 경로 변경시 최상단이동 컴포넌트 */}
-          <ScrollTop />
-          <Routes>
-            {/* 중요! 레이아웃 컴포넌트를 루트로 설정!!
+      <React.StrictMode>
+        <QueryClientProvider client={queryClient}>
+          <ReactQueryDevtools initialIsOpen={false}>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
+              {/* 라우터 경로 변경시 최상단이동 컴포넌트 */}
+              <ScrollTop />
+              <Routes>
+                {/* 중요! 레이아웃 컴포넌트를 루트로 설정!!
           홀로 당기기 ㄴㄴ 반드시 하위 라우트 감싸기 */}
 
-            <Route path="/" element={<Layout />}>
-              {/* 하위라우트 셋팅: path 대신
+                <Route path="/" element={<Layout />}>
+                  {/* 하위라우트 셋팅: path 대신
             index로 설정하면 첫 페이지로 */}
-              {/* <Route index element={<Intro />} /> */}
-              <Route index element={<Main />} />
-              <Route path="/" element={<Main />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/inside" element={<Inside />} />
-              <Route path="/taste" element={<Taste />} />
-              <Route path="/benefit" element={<Benefit />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/notice" element={<Notice />} />
-              <Route path="/Detail" element={<Detail />} />
-              <Route path="/search" element={<SearchPage />} />
-              <Route path="/member" element={<Member />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </QueryClientProvider>
+                  {/* <Route index element={<Intro />} /> */}
+                  <Route index element={<Login />} />
+                  {/* <Route path="/" element={<Main />} /> */}
+                  {/* <Route path="/shop" element={<Shop />} /> */}
+                  {/* <Route path="/inside" element={<Inside />} /> */}
+                  {/* <Route path="/taste" element={<Taste />} /> */}
+                  {/* <Route path="/benefit" element={<Benefit />} /> */}
+                  <Route path="/login" element={<Login />} />
+                  {/* <Route path="/notice" element={<Notice />} /> */}
+                  {/* <Route path="/Detail" element={<Detail />} /> */}
+                  {/* <Route path="/search" element={<SearchPage />} /> */}
+                  {/* <Route path="/member" element={<Member />} /> */}
+                </Route>
+              </Routes>
+            </BrowserRouter>
+          </ReactQueryDevtools>
+        </QueryClientProvider>
+      </React.StrictMode>
     </>
   );
 }
